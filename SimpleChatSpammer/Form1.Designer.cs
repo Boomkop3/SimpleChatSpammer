@@ -31,31 +31,34 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.bnGo = new System.Windows.Forms.Button();
-            this.TbxLetterDelay = new System.Windows.Forms.TextBox();
-            this.tbxLineDelay = new System.Windows.Forms.TextBox();
-            this.tbxStartDelay = new System.Windows.Forms.TextBox();
             this.checkRemoveLines = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.numStart = new System.Windows.Forms.NumericUpDown();
+            this.numLine = new System.Windows.Forms.NumericUpDown();
+            this.numLetter = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numStart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numLine)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numLetter)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.numLetter);
+            this.panel1.Controls.Add(this.numLine);
+            this.panel1.Controls.Add(this.numStart);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.checkRemoveLines);
-            this.panel1.Controls.Add(this.tbxStartDelay);
-            this.panel1.Controls.Add(this.tbxLineDelay);
-            this.panel1.Controls.Add(this.TbxLetterDelay);
             this.panel1.Controls.Add(this.bnGo);
             this.panel1.Controls.Add(this.picLogo);
             this.panel1.Location = new System.Drawing.Point(12, 487);
@@ -85,33 +88,7 @@
             this.bnGo.TabIndex = 2;
             this.bnGo.Text = "Go!";
             this.bnGo.UseVisualStyleBackColor = true;
-            // 
-            // TbxLetterDelay
-            // 
-            this.TbxLetterDelay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TbxLetterDelay.Location = new System.Drawing.Point(898, 55);
-            this.TbxLetterDelay.Name = "TbxLetterDelay";
-            this.TbxLetterDelay.Size = new System.Drawing.Size(176, 20);
-            this.TbxLetterDelay.TabIndex = 3;
-            this.TbxLetterDelay.Text = "5";
-            // 
-            // tbxLineDelay
-            // 
-            this.tbxLineDelay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbxLineDelay.Location = new System.Drawing.Point(898, 29);
-            this.tbxLineDelay.Name = "tbxLineDelay";
-            this.tbxLineDelay.Size = new System.Drawing.Size(176, 20);
-            this.tbxLineDelay.TabIndex = 4;
-            this.tbxLineDelay.Text = "1000";
-            // 
-            // tbxStartDelay
-            // 
-            this.tbxStartDelay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbxStartDelay.Location = new System.Drawing.Point(898, 3);
-            this.tbxStartDelay.Name = "tbxStartDelay";
-            this.tbxStartDelay.Size = new System.Drawing.Size(176, 20);
-            this.tbxStartDelay.TabIndex = 5;
-            this.tbxStartDelay.Text = "5000";
+            this.bnGo.Click += new System.EventHandler(this.bnGo_Click);
             // 
             // checkRemoveLines
             // 
@@ -178,6 +155,57 @@
             this.textBox1.Size = new System.Drawing.Size(1291, 469);
             this.textBox1.TabIndex = 1;
             // 
+            // numStart
+            // 
+            this.numStart.Location = new System.Drawing.Point(897, 6);
+            this.numStart.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.numStart.Name = "numStart";
+            this.numStart.Size = new System.Drawing.Size(176, 20);
+            this.numStart.TabIndex = 11;
+            this.numStart.Value = new decimal(new int[] {
+            5000,
+            0,
+            0,
+            0});
+            // 
+            // numLine
+            // 
+            this.numLine.Location = new System.Drawing.Point(897, 30);
+            this.numLine.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.numLine.Name = "numLine";
+            this.numLine.Size = new System.Drawing.Size(176, 20);
+            this.numLine.TabIndex = 12;
+            this.numLine.Value = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            // 
+            // numLetter
+            // 
+            this.numLetter.Location = new System.Drawing.Point(897, 55);
+            this.numLetter.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.numLetter.Name = "numLetter";
+            this.numLetter.Size = new System.Drawing.Size(176, 20);
+            this.numLetter.TabIndex = 13;
+            this.numLetter.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -192,6 +220,9 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numStart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numLine)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numLetter)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,10 +238,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox checkRemoveLines;
-        private System.Windows.Forms.TextBox tbxStartDelay;
-        private System.Windows.Forms.TextBox tbxLineDelay;
-        private System.Windows.Forms.TextBox TbxLetterDelay;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.NumericUpDown numLetter;
+        private System.Windows.Forms.NumericUpDown numLine;
+        private System.Windows.Forms.NumericUpDown numStart;
     }
 }
 
