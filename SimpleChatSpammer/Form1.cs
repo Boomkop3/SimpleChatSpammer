@@ -16,5 +16,12 @@ namespace SimpleChatSpammer
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            picLogo.Image = Properties.Resources.VBird_mid_square;
+        }
+
+
     }
 }
