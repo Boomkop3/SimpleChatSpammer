@@ -46,6 +46,8 @@
             this.progressLine = new System.Windows.Forms.ProgressBar();
             this.label7 = new System.Windows.Forms.Label();
             this.progressTotal = new System.Windows.Forms.ProgressBar();
+            this.lblPrefix = new System.Windows.Forms.Label();
+            this.tbxPrefix = new System.Windows.Forms.TextBox();
             this.controlPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numStart)).BeginInit();
@@ -57,6 +59,8 @@
             // 
             this.controlPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.controlPanel.Controls.Add(this.tbxPrefix);
+            this.controlPanel.Controls.Add(this.lblPrefix);
             this.controlPanel.Controls.Add(this.progressTotal);
             this.controlPanel.Controls.Add(this.label7);
             this.controlPanel.Controls.Add(this.progressLine);
@@ -275,6 +279,23 @@
             this.progressTotal.Size = new System.Drawing.Size(611, 23);
             this.progressTotal.TabIndex = 22;
             // 
+            // lblPrefix
+            // 
+            this.lblPrefix.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPrefix.AutoSize = true;
+            this.lblPrefix.Location = new System.Drawing.Point(785, 101);
+            this.lblPrefix.Name = "lblPrefix";
+            this.lblPrefix.Size = new System.Drawing.Size(33, 13);
+            this.lblPrefix.TabIndex = 23;
+            this.lblPrefix.Text = "Prefix";
+            // 
+            // tbxPrefix
+            // 
+            this.tbxPrefix.Location = new System.Drawing.Point(897, 98);
+            this.tbxPrefix.Name = "tbxPrefix";
+            this.tbxPrefix.Size = new System.Drawing.Size(176, 20);
+            this.tbxPrefix.TabIndex = 24;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -317,6 +338,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ProgressBar progressTotal;
+        private System.Windows.Forms.TextBox tbxPrefix;
+        private System.Windows.Forms.Label lblPrefix;
     }
 }
 

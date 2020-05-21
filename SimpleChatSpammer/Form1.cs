@@ -99,6 +99,14 @@ namespace SimpleChatSpammer
             }
         }
 
+        private string prefix
+        {
+            get
+            {
+                return tbxPrefix.Text;
+            }
+        }
+
         private async void bnGo_Click(object sender, EventArgs e)
         {
             init();
@@ -113,7 +121,7 @@ namespace SimpleChatSpammer
             progressTotal.Maximum = remainingLines;
             for (int count = 0; remainingLines > 0; count++)
             {
-                string line = popLine();
+                string line = prefix + popLine();
                 progressTotal.Value = count;
                 progressLine.Value = 0;
                 progressLine.Maximum = line.Length;
