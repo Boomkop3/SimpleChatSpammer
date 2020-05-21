@@ -157,6 +157,7 @@
             // 
             // numStart
             // 
+            this.numStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.numStart.Location = new System.Drawing.Point(897, 6);
             this.numStart.Maximum = new decimal(new int[] {
             10000,
@@ -174,6 +175,7 @@
             // 
             // numLine
             // 
+            this.numLine.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.numLine.Location = new System.Drawing.Point(897, 30);
             this.numLine.Maximum = new decimal(new int[] {
             10000,
@@ -191,6 +193,7 @@
             // 
             // numLetter
             // 
+            this.numLetter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.numLetter.Location = new System.Drawing.Point(897, 55);
             this.numLetter.Maximum = new decimal(new int[] {
             10000,
@@ -213,7 +216,7 @@
             this.ClientSize = new System.Drawing.Size(1321, 627);
             this.Controls.Add(this.tbxInput);
             this.Controls.Add(this.panel1);
-            this.MinimumSize = new System.Drawing.Size(720, 420);
+            this.MinimumSize = new System.Drawing.Size(900, 666);
             this.Name = "Form1";
             this.Text = "Simple Spambot";
             this.Load += new System.EventHandler(this.Form1_Load);
