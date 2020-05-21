@@ -102,17 +102,33 @@ namespace SimpleChatSpammer
         private async void bnGo_Click(object sender, EventArgs e)
         {
             init();
-            await Task.Delay(startDelay);
-            while (remainingLines > 0)
+            progressStartUp.Maximum = startDelay / 25;
+            progressStartUp.Value = 0;
+            for (int i = 0; i < startDelay / 25; i++)
+            {
+                progressStartUp.Value = i;
+                await Task.Delay(25);
+            }
+            progressTotal.Value = 0;
+            progressTotal.Maximum = remainingLines;
+            for (int count = 0; remainingLines > 0; count++)
             {
                 string line = popLine();
-                foreach (char letter in line)
+                progressTotal.Value = count;
+                progressLine.Value = 0;
+                progressLine.Maximum = line.Length;
+                for (int i = 0; i < line.Length; i++)
                 {
+                    progressLine.Value = i;
+                    char letter = line[i];
                     SendKeys.SendWait(letter.ToString());
                     await Task.Delay(letterDelay);
                 }
                 await Task.Delay(lineDelay);
             }
+            progressLine.Value = 0;
+            progressStartUp.Value = 0;
+            progressTotal.Value = 0;
         }
     }
 }

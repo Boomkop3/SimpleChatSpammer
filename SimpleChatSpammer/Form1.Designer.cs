@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.controlPanel = new System.Windows.Forms.Panel();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.bnGo = new System.Windows.Forms.Button();
             this.checkRemoveLines = new System.Windows.Forms.CheckBox();
@@ -40,31 +40,43 @@
             this.numStart = new System.Windows.Forms.NumericUpDown();
             this.numLine = new System.Windows.Forms.NumericUpDown();
             this.numLetter = new System.Windows.Forms.NumericUpDown();
-            this.panel1.SuspendLayout();
+            this.progressStartUp = new System.Windows.Forms.ProgressBar();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.progressLine = new System.Windows.Forms.ProgressBar();
+            this.label7 = new System.Windows.Forms.Label();
+            this.progressTotal = new System.Windows.Forms.ProgressBar();
+            this.controlPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numStart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numLine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numLetter)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // controlPanel
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.controlPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.numLetter);
-            this.panel1.Controls.Add(this.numLine);
-            this.panel1.Controls.Add(this.numStart);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.checkRemoveLines);
-            this.panel1.Controls.Add(this.bnGo);
-            this.panel1.Controls.Add(this.picLogo);
-            this.panel1.Location = new System.Drawing.Point(12, 487);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1297, 128);
-            this.panel1.TabIndex = 0;
+            this.controlPanel.Controls.Add(this.progressTotal);
+            this.controlPanel.Controls.Add(this.label7);
+            this.controlPanel.Controls.Add(this.progressLine);
+            this.controlPanel.Controls.Add(this.label6);
+            this.controlPanel.Controls.Add(this.label5);
+            this.controlPanel.Controls.Add(this.progressStartUp);
+            this.controlPanel.Controls.Add(this.numLetter);
+            this.controlPanel.Controls.Add(this.numLine);
+            this.controlPanel.Controls.Add(this.numStart);
+            this.controlPanel.Controls.Add(this.label4);
+            this.controlPanel.Controls.Add(this.label3);
+            this.controlPanel.Controls.Add(this.label2);
+            this.controlPanel.Controls.Add(this.label1);
+            this.controlPanel.Controls.Add(this.checkRemoveLines);
+            this.controlPanel.Controls.Add(this.bnGo);
+            this.controlPanel.Controls.Add(this.picLogo);
+            this.controlPanel.Location = new System.Drawing.Point(12, 487);
+            this.controlPanel.Name = "controlPanel";
+            this.controlPanel.Size = new System.Drawing.Size(1297, 128);
+            this.controlPanel.TabIndex = 0;
             // 
             // picLogo
             // 
@@ -209,19 +221,73 @@
             0,
             0});
             // 
+            // progressStartUp
+            // 
+            this.progressStartUp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.progressStartUp.Location = new System.Drawing.Point(232, 0);
+            this.progressStartUp.Name = "progressStartUp";
+            this.progressStartUp.Size = new System.Drawing.Size(551, 23);
+            this.progressStartUp.TabIndex = 16;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(169, 6);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(57, 13);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Starting in:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(169, 32);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(65, 13);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "currrent line:";
+            // 
+            // progressLine
+            // 
+            this.progressLine.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.progressLine.Location = new System.Drawing.Point(232, 29);
+            this.progressLine.Name = "progressLine";
+            this.progressLine.Size = new System.Drawing.Size(551, 23);
+            this.progressLine.TabIndex = 20;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(232, 80);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(34, 13);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "Total:";
+            // 
+            // progressTotal
+            // 
+            this.progressTotal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.progressTotal.Location = new System.Drawing.Point(172, 101);
+            this.progressTotal.Name = "progressTotal";
+            this.progressTotal.Size = new System.Drawing.Size(611, 23);
+            this.progressTotal.TabIndex = 22;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1321, 627);
             this.Controls.Add(this.tbxInput);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.controlPanel);
             this.MinimumSize = new System.Drawing.Size(900, 666);
             this.Name = "Form1";
             this.Text = "Simple Spambot";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.controlPanel.ResumeLayout(false);
+            this.controlPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numStart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numLine)).EndInit();
@@ -233,7 +299,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel controlPanel;
         private System.Windows.Forms.PictureBox picLogo;
         private System.Windows.Forms.Button bnGo;
         private System.Windows.Forms.Label label4;
@@ -245,6 +311,12 @@
         private System.Windows.Forms.NumericUpDown numLetter;
         private System.Windows.Forms.NumericUpDown numLine;
         private System.Windows.Forms.NumericUpDown numStart;
+        private System.Windows.Forms.ProgressBar progressStartUp;
+        private System.Windows.Forms.ProgressBar progressLine;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ProgressBar progressTotal;
     }
 }
 
