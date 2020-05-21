@@ -54,9 +54,65 @@ namespace SimpleChatSpammer
             }
         }
 
-        private void bnGo_Click(object sender, EventArgs e)
-        {
+        private Queue<String> lines;
 
+        private void init()
+        {
+            lines = new Queue<string>();
+            var linesArray = tbxInput.Text.Replace("\r\n", "\n").Split('\n');
+            foreach (string line in linesArray)
+            {
+                lines.Enqueue(
+                    line
+                );
+            }
+        }
+
+        private string currentText
+        {
+            get
+            {
+                StringBuilder builder = new StringBuilder();
+                string[] linesArray = lines.ToArray();
+                foreach (string line in linesArray)
+                {
+                    builder.AppendLine(line);
+                }
+                return builder.ToString();
+            }
+        }
+
+        private string popLine()
+        {
+            if (removeLines)
+            {
+                tbxInput.Text = currentText;
+            }
+            return lines.Dequeue();
+        }
+
+        private int remainingLines
+        {
+            get
+            {
+                return lines.Count();
+            }
+        }
+
+        private async void bnGo_Click(object sender, EventArgs e)
+        {
+            init();
+            await Task.Delay(startDelay);
+            while (remainingLines > 0)
+            {
+                string line = popLine();
+                foreach (char letter in line)
+                {
+                    SendKeys.SendWait(letter.ToString());
+                    await Task.Delay(letterDelay);
+                }
+                await Task.Delay(lineDelay);
+            }
         }
     }
 }
