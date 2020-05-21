@@ -22,6 +22,41 @@ namespace SimpleChatSpammer
             picLogo.Image = Properties.Resources.VBird_mid_square;
         }
 
+        private int startDelay
+        {
+            get
+            {
+                return (int)numStart.Value;
+            }
+        }
 
+        private int lineDelay
+        {
+            get
+            {
+                return (int)numLine.Value;
+            }
+        }
+
+        private int letterDelay
+        {
+            get
+            {
+                return (int)numLetter.Value;
+            }
+        }
+
+        private bool removeLines
+        {
+            get
+            {
+                return checkRemoveLines.Checked;
+            }
+        }
+
+        private void bnGo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
