@@ -93,6 +93,7 @@
             this.TbxLetterDelay.Name = "TbxLetterDelay";
             this.TbxLetterDelay.Size = new System.Drawing.Size(176, 20);
             this.TbxLetterDelay.TabIndex = 3;
+            this.TbxLetterDelay.Text = "5";
             // 
             // tbxLineDelay
             // 
@@ -101,6 +102,7 @@
             this.tbxLineDelay.Name = "tbxLineDelay";
             this.tbxLineDelay.Size = new System.Drawing.Size(176, 20);
             this.tbxLineDelay.TabIndex = 4;
+            this.tbxLineDelay.Text = "1000";
             // 
             // tbxStartDelay
             // 
@@ -109,11 +111,14 @@
             this.tbxStartDelay.Name = "tbxStartDelay";
             this.tbxStartDelay.Size = new System.Drawing.Size(176, 20);
             this.tbxStartDelay.TabIndex = 5;
+            this.tbxStartDelay.Text = "5000";
             // 
             // checkRemoveLines
             // 
             this.checkRemoveLines.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkRemoveLines.AutoSize = true;
+            this.checkRemoveLines.Checked = true;
+            this.checkRemoveLines.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkRemoveLines.Location = new System.Drawing.Point(898, 81);
             this.checkRemoveLines.Name = "checkRemoveLines";
             this.checkRemoveLines.Size = new System.Drawing.Size(15, 14);
