@@ -125,6 +125,7 @@ namespace SimpleChatSpammer
                     await Task.Delay(letterDelay);
                 }
                 SendKeys.SendWait("{Enter}");
+                await Task.Delay(letterDelay);
                 await Task.Delay(lineDelay);
             }
             progressLine.Value = 0;
