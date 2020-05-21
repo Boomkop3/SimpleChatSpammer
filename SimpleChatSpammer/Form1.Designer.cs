@@ -36,7 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbxInput = new System.Windows.Forms.TextBox();
             this.numStart = new System.Windows.Forms.NumericUpDown();
             this.numLine = new System.Windows.Forms.NumericUpDown();
             this.numLetter = new System.Windows.Forms.NumericUpDown();
@@ -142,18 +142,18 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Removed typed lines";
             // 
-            // textBox1
+            // tbxInput
             // 
-            this.textBox1.AcceptsReturn = true;
-            this.textBox1.AcceptsTab = true;
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tbxInput.AcceptsReturn = true;
+            this.tbxInput.AcceptsTab = true;
+            this.tbxInput.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(15, 12);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(1291, 469);
-            this.textBox1.TabIndex = 1;
+            this.tbxInput.Location = new System.Drawing.Point(15, 12);
+            this.tbxInput.Multiline = true;
+            this.tbxInput.Name = "tbxInput";
+            this.tbxInput.Size = new System.Drawing.Size(1291, 469);
+            this.tbxInput.TabIndex = 1;
             // 
             // numStart
             // 
@@ -211,7 +211,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1321, 627);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbxInput);
             this.Controls.Add(this.panel1);
             this.MinimumSize = new System.Drawing.Size(720, 420);
             this.Name = "Form1";
@@ -238,7 +238,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox checkRemoveLines;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbxInput;
         private System.Windows.Forms.NumericUpDown numLetter;
         private System.Windows.Forms.NumericUpDown numLine;
         private System.Windows.Forms.NumericUpDown numStart;
